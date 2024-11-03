@@ -2,7 +2,7 @@ import socket
 
 def start_server():
     host = '127.0.0.1'  # Endereço IP local
-    port = 65432        # Porta para escutar
+    port = 9999        # Porta para escutar
 
     # Cria o socket UDP
     with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as server_socket:

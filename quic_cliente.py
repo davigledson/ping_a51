@@ -1,7 +1,7 @@
 import asyncio
 from aioquic.asyncio import connect
 from aioquic.quic.configuration import QuicConfiguration
-
+# ambiente_virtual\Scripts\activate (ativa ambiente virtual)
 async def run_client():
     configuration = QuicConfiguration(is_client=True)
     configuration.verify_mode = False  # Ignora a validação de certificados
