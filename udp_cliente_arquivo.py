@@ -33,7 +33,7 @@ def send_file_via_udp(filename, host='127.0.0.1', port=9999):
 if __name__ == "__main__":
     original_filename = "arquivo.txt"
     encrypted_filename = f"{original_filename}.gpg"
-    recipient = "E7E7F0DCE8E6AAD877AFE08CC426E2A89F6A8474"  
+    recipient = "91C0515C66DD1A45A80F385EA7DC3148C4745490"
     
     if encrypt_file_with_public_key(original_filename, recipient):
         

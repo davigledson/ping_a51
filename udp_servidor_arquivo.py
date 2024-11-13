@@ -1,5 +1,13 @@
 import socket
 import subprocess
+# baixar a versao gpg4win-4.3.1
+# baixar o socket
+
+# 1 passo - rodar o arquivo udp_servidor_arquivo.python
+# 2 passo - colocar a chave publica no arquivo cliente
+# 3 passo - rodar o arquivo udp_cliente_arquivo.python
+
+
 
 def start_udp_server(host='127.0.0.1', port=9999):
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -15,7 +23,7 @@ def start_udp_server(host='127.0.0.1', port=9999):
             f.write(data)
             print(f'Pacote recebido de {addr}')
 
-    sock.close()
+    sock.close() 
 
     try:
         subprocess.run(['gpg', '--output', 'arquivo_recebido.txt', '--decrypt', 'arquivo.txt.gpg'], check=True)
